@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Frontend
+node_modules/
+dist/
+.vite/
+
+# Rust
+target/
+**/src-tauri/gen/
+
+# Local environments and outputs
+.codex-tmp/
+.codex-cache/
+local/
+outputs/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.log
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# AI/editor working artifacts
+.ai/
+.ai-work/
+.agent/
+.agents/
+.codex/
+.zcode/
+.cursor/
+.claude/
+.chatgpt/
+chat-logs/
+conversation-logs/
+conversations/
+memories/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.idea/
+.vscode/

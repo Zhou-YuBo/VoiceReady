@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "VoiceReady",
+  "version": "0.1.0",
+  "identifier": "com.voiceready.app",
+  "build": {
+    "frontendDist": "apps/frontend/dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "pnpm --dir apps/frontend dev",
+    "beforeBuildCommand": "pnpm --dir apps/frontend build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "VoiceReady",
+        "width": 1400,
+        "height": 900,
+        "minWidth": 1024,
+        "minHeight": 700,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": false,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "android": {
+      "debugApplicationIdSuffix": ".debug"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[project]
+name = "voiceready-workspace"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = [
+    "apps/kernel",
+    "packages/py-core",
+    "packages/py-audio",
+    "packages/py-voice-prep",
+    "packages/py-tts-prep",
+    "packages/py-rvc-lab",
+]

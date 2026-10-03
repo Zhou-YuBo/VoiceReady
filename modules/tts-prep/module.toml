@@ -1,0 +1,12 @@
+id = "tts-prep"
+name = "TTS Preparation"
+version = "0.1.0"
+required = false
+
+[runtime]
+python = "pending"
+
+[capabilities]
+asr = true
+official_text_review = true
+tts_export = true

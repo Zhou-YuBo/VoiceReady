@@ -1,0 +1,11 @@
+id = "core"
+name = "VoiceReady Core"
+version = "0.1.0"
+required = true
+
+[runtime]
+python = "pending"
+
+[capabilities]
+project_database = true
+task_orchestration = true

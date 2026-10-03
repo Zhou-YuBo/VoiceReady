@@ -1,0 +1,21 @@
+[package]
+name = "voiceready-desktop"
+version = "0.1.0"
+description = "VoiceReady desktop shell"
+authors = ["VoiceReady"]
+edition = "2024"
+rust-version = "1.96"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"

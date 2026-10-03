@@ -1,0 +1,13 @@
+id = "rvc-lab"
+name = "RVC Lab"
+version = "0.1.0"
+required = false
+
+[runtime]
+python = "pending"
+
+[capabilities]
+song_analysis = true
+pitch_advice = true
+inference = true
+result_check = true

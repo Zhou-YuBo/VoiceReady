@@ -1,0 +1,12 @@
+id = "voice-prep"
+name = "Voice Preparation"
+version = "0.1.0"
+required = false
+
+[runtime]
+python = "pending"
+
+[capabilities]
+provenance = true
+audio_quality = true
+segmentation = true

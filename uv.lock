@@ -1,0 +1,49 @@
+version = 1
+revision = 3
+requires-python = "==3.11.*"
+
+[manifest]
+members = [
+    "voiceready-audio",
+    "voiceready-core",
+    "voiceready-kernel",
+    "voiceready-rvc-lab",
+    "voiceready-tts-prep",
+    "voiceready-voice-prep",
+    "voiceready-workspace",
+]
+
+[[package]]
+name = "voiceready-audio"
+version = "0.1.0"
+source = { editable = "packages/py-audio" }
+
+[[package]]
+name = "voiceready-core"
+version = "0.1.0"
+source = { editable = "packages/py-core" }
+
+[[package]]
+name = "voiceready-kernel"
+version = "0.1.0"
+source = { editable = "apps/kernel" }
+
+[[package]]
+name = "voiceready-rvc-lab"
+version = "0.1.0"
+source = { editable = "packages/py-rvc-lab" }
+
+[[package]]
+name = "voiceready-tts-prep"
+version = "0.1.0"
+source = { editable = "packages/py-tts-prep" }
+
+[[package]]
+name = "voiceready-voice-prep"
+version = "0.1.0"
+source = { editable = "packages/py-voice-prep" }
+
+[[package]]
+name = "voiceready-workspace"
+version = "0.1.0"
+source = { virtual = "." }
