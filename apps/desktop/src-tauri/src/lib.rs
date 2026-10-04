@@ -23,7 +23,7 @@ struct KernelState(Mutex<KernelManager>);
 
 impl KernelManager {
     fn new() -> Self {
-        let working_dir = env::current_dir().unwrap_or_else(|_| PathBuf::from("."));
+        let working_dir = workspace_root();
         let python = env::var_os("VOICEREADY_KERNEL_PYTHON")
             .map(PathBuf::from)
             .or_else(|| {
@@ -187,6 +187,18 @@ impl Drop for KernelManager {
     fn drop(&mut self) {
         self.stop();
     }
+}
+
+fn workspace_root() -> PathBuf {
+    let current = env::current_dir().unwrap_or_else(|_| PathBuf::from("."));
+    for ancestor in current.ancestors() {
+        let has_workspace_manifest = ancestor.join("pyproject.toml").is_file();
+        let has_kernel_manifest = ancestor.join("apps/kernel/pyproject.toml").is_file();
+        if has_workspace_manifest && has_kernel_manifest {
+            return ancestor.to_path_buf();
+        }
+    }
+    current
 }
 
 fn project_params(project_root: String) -> Value {
