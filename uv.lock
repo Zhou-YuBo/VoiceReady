@@ -27,6 +27,12 @@ source = { editable = "packages/py-core" }
 name = "voiceready-kernel"
 version = "0.1.0"
 source = { editable = "apps/kernel" }
+dependencies = [
+    { name = "voiceready-core" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "voiceready-core", editable = "packages/py-core" }]
 
 [[package]]
 name = "voiceready-rvc-lab"
